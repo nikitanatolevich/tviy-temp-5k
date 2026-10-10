@@ -27,7 +27,7 @@
 <section id="rules" class="rules"><div class="sectionlabel">Тренуйся послідовно</div><h2>Правила плану</h2><div class="rulegrid">
 <details class="rule" open><summary>01 · Легкий біг справді легкий</summary><p>Easy: орієнтир 6:10–6:40/км, RPE 2–4 із 10, дихання дозволяє говорити реченнями. За втоми, спеки чи на підйомах — повільніше. Дуже легкий біг: RPE 2–3 без вимоги втримати цифру. Прискорення 4×20 с — плавні, розслаблені, не спринт; між ними 60–90 с легкого бігу або ходьби.</p></details>
 <details class="rule" open><summary>02 · Швидкість без гонитви за цифрами</summary><p>Темпо: орієнтовно RPE 6–7, інтервали: 7–8, без зриву техніки. Перед швидкою роботою 10–15 хв легкого бігу, рухова розминка й 3×15–20 с плавних прискорень; після — 1–2 км легко. Якщо розминка вже вказана в сесії, не додавай її вдруге. Відновлення між повторами — легкий біг або ходьба.</p></details>
-<details class="rule" open><summary>03 · Full Body, RIR і прогресія</summary><p>RIR 2–3 означає 2–3 технічно чисті повтори в запасі. Важкі вправи: відпочинок 2–3 хв; допоміжні: 60–90 с. Перед силовою — 5–8 хв руху та легкі підвідні підходи. Коли всі підходи досягли верхньої межі повторів із потрібним запасом — трохи збільш вагу. Без системної відмови. Обери одну альтернативу через «/» і тримай її послідовно.</p></details>
+<details class="rule" open><summary>03 · Hybrid, RIR і відпочинок</summary><p>RIR 2–3 означає 2–3 технічно чисті повтори в запасі. Точний відпочинок тепер вказаний біля кожної вправи. Для skill/power та важких базових рухів зазвичай 2–3 хв, для гіпертрофії 60–120 с, для core/ізоляції 45–90 с. Перед силовою — 5–8 хв руху та легкі підвідні підходи. Коли всі підходи досягли верхньої межі повторів із потрібним запасом — трохи збільш вагу. Без системної відмови. Обери одну альтернативу через «/» і тримай її послідовно.</p></details>
 <details class="rule" open><summary>04 · Ноги та відновлення</summary><p>Понеділок передує інтервалам: не збільшуй одночасно ваги на ноги й бігове навантаження. У п’ятницю ноги легкі, із запасом 3–4 повтори. Неділя — відновлення. За накопиченої втоми зменш підходи на ноги на 30–50% або заміни суботню швидку сесію на easy. У перший тиждень після недавнього півмарафону можна виконувати близько 65–70% силового обсягу. Позначення виконання — запис фактичного дня, а не вимога виконати все попри втому.</p></details>
 <details class="rule" open><summary>05 · Taper — свіжість перед стартом</summary><p>W7: зменш підходи на ноги приблизно на третину, без нових вправ. W8: Full Body залишається у пн/ср/пт, але обсяг різко менший: у понеділок полегшений A, у середу короткий B, у п’ятницю 10–15 хв дуже легкої активації C. RIR 4–5 або більше, лише знайомі рухи, без крепатури. Четвер — easy, субота — дуже легко або відпочинок. Неділя 15.11 — забіг замість відновлення. Мета — зберегти відчуття швидкості й прибрати втому.</p></details>
 <details class="rule" open><summary>06 · DOMS і біль — різні сигнали</summary><p>DOMS — відкладена м’язова крепатура після незвичного навантаження. Якщо вона заважає звично рухатись, полегш день. Гострий локальний біль, набряк або зміна ходи — привід припинити тренування; біль, що посилюється чи не минає, варто оцінити з фахівцем. Не намагайся «пробігти через» біль.</p></details>
@@ -88,6 +88,47 @@ airsquat:'Присідання без ваги: стопи стабільні, �
 deadbug:'Dead Bug — «мертвий жук». Поперек м’яко притисни до підлоги й повільно випрямляй протилежні руку та ногу, не втрачаючи положення таза.'
 };
 
+const restTips={
+  pull:'90–120 с',
+  push:'90–120 с',
+  split:'2–3 хв',
+  rdl:'2 хв',
+  row:'90–120 с',
+  press:'90–120 с',
+  calf:'60–90 с',
+  core:'60–90 с',
+  squat:'2 хв',
+  raise:'45–60 с',
+  arms:'60–90 с',
+  highpull:'2–3 хв',
+  bandmu:'2–3 хв',
+  sbdip:'90–120 с',
+  wpull:'2,5–3 хв',
+  wdip:'2–3 хв',
+  bulgarian:'2–3 хв',
+  dbrdl:'2 хв',
+  farmer:'60–90 с',
+  lsit:'60–90 с',
+  broad:'2–3 хв',
+  pogo:'60–90 с',
+  slrdl:'90–120 с',
+  pike:'90–120 с',
+  inverted:'90–120 с',
+  bear:'60–90 с',
+  pallof:'45–60 с',
+  emom:'за схемою EMOM',
+  chestbar:'2–3 хв',
+  chin:'90–120 с',
+  dips:'90–120 с',
+  elevpush:'60–90 с',
+  hangraise:'60–90 с',
+  revlunge:'60–90 с',
+  lightpush:'45–60 с',
+  lightrow:'45–60 с',
+  airsquat:'45–60 с',
+  deadbug:'45–60 с'
+};
+function restFor(key){return restTips[key]||'60–90 с'}
 const A=[['Підтягування','4×5–8','pull'],['Бруси / жим гантелей','4×6–10','push'],['Болгарські присідання','3×6–8 / нога','split'],['Румунська тяга (RDL)','3×6–10','rdl'],['Тяга гантелі однією рукою','3×8–10 / сторона','row'],['Жим над головою','2×8–10','press'],['Підйоми на носки','3×10–15','calf'],['Підйоми колін у висі','2×10–15','core']];
 const B=[['Підтягування','3×8–10','pull'],['Бруси / віджимання','3×8–12','push'],['Goblet squat','3×8–12','squat'],['Одноногий RDL','2×8–10 / нога','rdl'],['Тяга гантелей','3×10–12','row'],['Підйоми гантелей убік','3×12–20','raise'],['Біцепс','2×10–15','arms'],['Dead bug / планка','2–3 підходи','core']];
 const C=[['Підтягування','3×6–10','pull'],['Бруси','3×8–12','push'],['Тяга гантелі','3×10 / сторона','row'],['Жим над головою','3×8–12','press'],['Легкі випади / split squat','2×8 / нога','split'],['Підйоми на носки','2×15','calf'],['Біцепс + трицепс','2×10–15 кожна','arms'],['Корпус (core)','2 підходи','core']];
@@ -200,19 +241,19 @@ if(w===7){
   exercises={A:HA8,B:HB8,C:HC8}[type].map(e=>[...e]);
   title=type==='A'?'Hybrid A · Race Week':type==='B'?'Hybrid B · Race Week':'Hybrid C · коротка активація';
   brief=type==='C'?'10–15 хв · дуже легко':'RIR 4–5 · тільки підтримка';
-  steps=type==='A'?['5–7 хв легкої розминки.','Легкі знайомі навантаження. Жодної відмови, важких ніг чи нових вправ.']:type==='B'?['5–7 хв легкої розминки.','Без conditioning. Стрибки субмаксимальні. Закінчи свіжим.']:['5 хв легкої мобільності.','Це не тренування на прогрес — лише коротка активація.'];
+  steps=type==='A'?['5–7 хв легкої розминки.','Легкі знайомі навантаження. Жодної відмови, важких ніг чи нових вправ.','Відпочивай 60–120 с; якщо пульс високий — довше.']:type==='B'?['5–7 хв легкої розминки.','Без conditioning. Стрибки субмаксимальні. Закінчи свіжим.','Між стрибками 90–120 с, між рештою 60–90 с.']:['5 хв легкої мобільності.','Це не тренування на прогрес — лише коротка активація.','Пауза 45–60 с або довше, якщо потрібно зберегти легкість.'];
   note='Race week: не створюй крепатури й не намагайся компенсувати пропущений обсяг.';
 }else if(w===6){
   exercises={A:HA7,B:HB7,C:HC7}[type].map(e=>[...e]);
   title=type==='A'?'Hybrid A · Pull Power + Strength':type==='B'?'Hybrid B · Athletic Full Body':'Hybrid C · Calisthenics + Skills';
   brief='Зменшений обсяг · свіжість важливіша';
-  steps=type==='A'?['7 хв розминки плечей, лопаток і таза.','Спочатку skill, потім сила. Усі підходи залишай технічно чистими.']:type==='B'?['8 хв динамічної розминки.','Power-вправи виконуються зі значним відпочинком. Conditioning цього тижня пропусти.']:['7–8 хв розминки.','Skill виконуй свіжим. Ноги цього дня можна пропустити повністю.'];
+  steps=type==='A'?['7 хв розминки плечей, лопаток і таза.','Спочатку skill, потім сила. Усі підходи залишай технічно чистими.','Між skill/важкими вправами — 2–3 хв; між рештою — 60–120 с.']:type==='B'?['8 хв динамічної розминки.','Power-вправи виконуються зі значним відпочинком. Conditioning цього тижня пропусти.','Між стрибковими підходами — 2–3 хв; між силовими — 90–120 с.']:['7–8 хв розминки.','Skill виконуй свіжим. Ноги цього дня можна пропустити повністю.','Між skill — 2–3 хв; між іншими вправами — 60–90 с.'];
   note='Тиждень швидкості й свіжості: обсяг нижчий, нових вправ немає.';
 }else{
   exercises={A:HA,B:HB,C:HC}[type].map(e=>[...e]);
   title=type==='A'?'Hybrid A · Pull Power + Strength':type==='B'?'Hybrid B · Athletic Full Body':'Hybrid C · Calisthenics + Skills';
   brief=type==='A'?'Muscle-up + сила · ноги дозовано':type==='B'?'Вибуховість + рух + функціональна сила':'Muscle-up + L-sit + м’язи · легкі ноги';
-  steps=type==='A'?['7 хв розминки: плечі/лопатки + резинка, 10 легких віджимань, 5 підтягувань, присідання без ваги.','Skill-блок виконуй першим, поки свіжий. Далі сила; RIR 2–3.']:type==='B'?['8 хв динамічної розминки: гомілкостоп, таз, плечі + легкі базові рухи.','Стрибкова робота — з повним відновленням. EMOM наприкінці — близько RPE 7, не на максимум.']:['7–8 хв розминки.','Skill спочатку: muscle-up і L-sit. Потім верх на гіпертрофію. Ноги — лише легко, щоб не псувати суботній біг.'];
+  steps=type==='A'?['7 хв розминки: плечі/лопатки + резинка, 10 легких віджимань, 5 підтягувань, присідання без ваги.','Skill-блок виконуй першим, поки свіжий. Далі сила; RIR 2–3.','Між різними skill/важкими вправами дай собі 2–3 хв; між допоміжними вправами — приблизно 1–2 хв.']:type==='B'?['8 хв динамічної розминки: гомілкостоп, таз, плечі + легкі базові рухи.','Стрибкова робота — з повним відновленням. EMOM наприкінці — близько RPE 7, не на максимум.','Між power-вправами — 2–3 хв; між силовими — 90–120 с; перед EMOM відпочинь близько 2 хв.']:['7–8 хв розминки.','Skill спочатку: muscle-up і L-sit. Потім верх на гіпертрофію. Ноги — лише легко, щоб не псувати суботній біг.','Між skill-вправами — 2–3 хв; між силовими/гіпертрофійними — 60–120 с.'];
   note=type==='A'?'Завтра інтервали: не добивай ноги.':type==='B'?'Вибуховість ≠ кардіо: як тільки якість стрибка падає — зупини power-блок.':'П’ятниця перед швидким бігом: без burpees і важкого conditioning на ноги.';
 }
 return{type:'strength',title,brief,steps,exercises,note}
@@ -222,7 +263,7 @@ if(d===6&&w!==7)return{type:'recovery',title:'Відпочинок / ходьб�
 if(w===7){if(d===3)return{type:'easy',title:'4–5 км + 4×20 с',brief:'Easy · розмовний темп',steps:['4–5 км легко: орієнтир 6:10–6:40/км, за потреби повільніше.','Наприкінці 4×20 с плавних прискорень, 60–90 с легко між ними.'],note:'Закінчи зі свіжими ногами.'};if(d===5)return{type:'easy',title:'15–20 хв дуже легко / відпочинок',brief:'Обери за самопочуттям',steps:['15–20 хв дуже легкого бігу, RPE 2–3, або повний відпочинок.','Підготуй звичні кросівки, одяг і маршрут до старту.'],note:'Обидва варіанти — виконаний день. Завтра головний старт.'};return{type:'tempo',title:'СТАРТ · 5 км',brief:'15.11.2026 · твій день · ціль 22:30',steps:['10–15 хв легко + рухова розминка + 3–4×15–20 с плавних прискорень. Заверш розминку за кілька хвилин до старту.','Км 1: 4:32–4:35. Не піддавайся стартовому ажіотажу.','Км 2: 4:30. Км 3: 4:30.','Км 4: 4:25–4:30. Км 5: усе, що залишилось, додаючи поступово.','Після фінішу — кілька хвилин ходьби, за самопочуттям легка заминка.'],note:'Виняток для неділі: сьогодні забіг замість відновлення. Запиши фінішний час і враження нижче.'}}
 if(d===3)return{type:'easy',title:easyKm[w]+' '+(w===6?'дуже легко':'легко')+([2,4].includes(w)?' + прискорення':''),brief:w===6?'RPE 2–3 · темп за відчуттями':'6:10–6:40/км · розмовний темп',steps:[easyKm[w]+' легкого бігу. '+(w===6?'Без вимоги до темпу, з вільним диханням.':'6:10–6:40/км або повільніше, щоб говорити реченнями.'),...([2,4].includes(w)?['Наприкінці 4×20 с плавних прискорень; 60–90 с легко або ходьба між ними.']:[])],note:'Завдання — відновитись і додати спокійний обсяг перед суботою.'};if(d===5){const x=tempo[w];return{type:'tempo',title:x[0],brief:x[1]+'/км · контрольоване зусилля',steps:x.slice(2),note:'Не перетворюй на змагання. Якщо темп не контрольований, сповільнись.'}}}
 function options(v){return '<option value="">Не оцінено</option>'+Array.from({length:10},(_,i)=>`<option value="${i+1}" ${String(v)===String(i+1)?'selected':''}>${i+1} / 10</option>`).join('')}
-function renderDay(w,d){const id=`w${w+1}d${d+1}`,p=dayPlan(w,d),e=entry(id);return `<details class="day ${e.done?'done':''}" data-day="${id}" ${d===0?'open':''}><summary><div class="day-date"><strong>${weekdays[d]}</strong><small>${fmtDate(dateAt(w*7+d))}</small></div><div class="day-main"><span class="tag" style="--color:var(--${p.type})">${labels[p.type]}</span><h3>${p.title}</h3><span class="brief">${p.brief}</span></div></summary><div class="day-body"><ol class="steps">${p.steps.map(s=>`<li>${s}</li>`).join('')}</ol>${p.exercises?'<div class="exercises">'+p.exercises.map((ex,i)=>`<details class="exercise"><summary><span>${i+1}. ${ex[0]}</span><span class="dose">${ex[1]}</span></summary><p>${exerciseTips[ex[2]]}</p></details>`).join('')+'</div>':''}<p class="daynote">${p.note||''}</p><div class="track"><label class="check"><input type="checkbox" data-id="${id}" data-field="done" ${e.done?'checked':''}>День виконано</label><div class="fields"><label class="field">RPE · 1 легко → 10 максимум<select data-id="${id}" data-field="rpe">${options(e.rpe)}</select></label><label class="field">Самопочуття · 1 погано → 10 чудово<select data-id="${id}" data-field="feel">${options(e.feel)}</select></label></div><label class="field">Нотатки за ${fmtDate(dateAt(w*7+d))}<textarea data-id="${id}" data-field="notes" placeholder="Ваги, повтори, фактичний темп, сон, враження…">${esc(e.notes)}</textarea></label><p class="printonly printed-notes" data-print="${id}"></p></div></div></details>`}
+function renderDay(w,d){const id=`w${w+1}d${d+1}`,p=dayPlan(w,d),e=entry(id);return `<details class="day ${e.done?'done':''}" data-day="${id}" ${d===0?'open':''}><summary><div class="day-date"><strong>${weekdays[d]}</strong><small>${fmtDate(dateAt(w*7+d))}</small></div><div class="day-main"><span class="tag" style="--color:var(--${p.type})">${labels[p.type]}</span><h3>${p.title}</h3><span class="brief">${p.brief}</span></div></summary><div class="day-body"><ol class="steps">${p.steps.map(s=>`<li>${s}</li>`).join('')}</ol>${p.exercises?'<div class="exercises">'+p.exercises.map((ex,i)=>`<details class="exercise"><summary><span>${i+1}. ${ex[0]}</span><span class="dose">${ex[1]} · відп. ${restFor(ex[2])}</span></summary><p>${exerciseTips[ex[2]]}<br><strong>Відпочинок між підходами:</strong> ${restFor(ex[2])}.</p></details>`).join('')+'</div>':''}<p class="daynote">${p.note||''}</p><div class="track"><label class="check"><input type="checkbox" data-id="${id}" data-field="done" ${e.done?'checked':''}>День виконано</label><div class="fields"><label class="field">RPE · 1 легко → 10 максимум<select data-id="${id}" data-field="rpe">${options(e.rpe)}</select></label><label class="field">Самопочуття · 1 погано → 10 чудово<select data-id="${id}" data-field="feel">${options(e.feel)}</select></label></div><label class="field">Нотатки за ${fmtDate(dateAt(w*7+d))}<textarea data-id="${id}" data-field="notes" placeholder="Ваги, повтори, фактичний темп, сон, враження…">${esc(e.notes)}</textarea></label><p class="printonly printed-notes" data-print="${id}"></p></div></div></details>`}
 function render(){ $('weeks').innerHTML=phases.map((_,w)=>`<button class="weekbtn" data-week="${w}" aria-pressed="${state.week===w}" aria-label="Тиждень ${w+1}: ${phases[w]}"><small>ТИЖ</small><strong>${String(w+1).padStart(2,'0')}</strong><small>${fmtDate(dateAt(w*7))}</small></button>`).join('');$('calendarbody').innerHTML=phases.map((p,w)=>`<section class="weeksection" data-section="${w}" ${state.week!==w?'hidden':''} aria-label="Тиждень ${w+1}"><div class="weekhead"><div class="row"><h2>Тиждень ${w+1} · ${p}</h2><span class="muted" style="font-size:12px;white-space:nowrap">${fmtDate(dateAt(w*7))}–${fmtDate(dateAt(w*7+6))}</span></div><p>${focus[w]}</p><div class="row"><small>Прогрес тижня</small><small id="count${w}"></small></div><progress class="progress" id="progress${w}" max="7" value="0" aria-label="Виконані дні тижня ${w+1}"></progress></div>${weekdays.map((_,d)=>renderDay(w,d)).join('')}</section>`).join('');updateProgress();updatePrintNotes()}
 function updateProgress(){let total=0;for(let w=0;w<8;w++){let n=0;for(let d=0;d<7;d++)if(entry(`w${w+1}d${d+1}`).done)n++;total+=n;$('count'+w).textContent=`${n} / 7 · ${Math.round(n/7*100)}%`;$('progress'+w).value=n}$('totalcount').textContent=`${total} / 56 днів`;$('totalpct').textContent=Math.round(total/56*100)+'%';$('totalprogress').value=total}
 function updatePrintNotes(){document.querySelectorAll('[data-print]').forEach(el=>{const e=entry(el.dataset.print);el.textContent=`RPE: ${e.rpe||'—'}/10 · Самопочуття: ${e.feel||'—'}/10`+(e.notes?'\nНотатки: '+e.notes:'')})}
